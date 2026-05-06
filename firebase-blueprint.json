@@ -1,0 +1,35 @@
+{
+  "entities": {
+    "Product": {
+      "title": "Product",
+      "description": "Product data",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "desc": { "type": "string" },
+        "price": { "type": "string" },
+        "img": { "type": "string" },
+        "createdAt": { "type": "timestamp" },
+        "updatedAt": { "type": "timestamp" }
+      },
+      "required": ["name", "desc", "price", "img", "createdAt", "updatedAt"]
+    },
+    "Admin": {
+      "title": "Admin",
+      "description": "Admin users",
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  },
+  "firestore": {
+    "products/{productId}": {
+      "schema": "Product",
+      "description": "Store all product information"
+    },
+    "admins/{userId}": {
+      "schema": "Admin",
+      "description": "Store admin user IDs"
+    }
+  }
+}
