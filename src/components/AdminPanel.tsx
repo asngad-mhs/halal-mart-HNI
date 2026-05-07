@@ -154,8 +154,8 @@ export default function AdminPanel({ onClose }: { onClose: () => void }) {
 
           <div>
             <h3 className="text-lg font-bold mb-4">Daftar Produk</h3>
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <table className="w-full text-left text-sm text-gray-600">
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-x-auto">
+              <table className="w-full text-left text-sm text-gray-600 min-w-[600px]">
                 <thead className="bg-gray-50 border-b border-gray-100 uppercase text-xs font-semibold text-gray-500">
                   <tr>
                     <th className="px-6 py-4">Produk</th>

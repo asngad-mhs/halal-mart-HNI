@@ -129,39 +129,50 @@ export default function App() {
               </button>
             </div>
 
-            {/* Mobile Menu Button */}
-            <div className="md:hidden flex items-center gap-4">
+            {/* Mobile Actions & Menu */}
+            <div className="md:hidden flex items-center gap-3">
               <button 
                 onClick={handleAdminClick} 
-                className="opacity-10 hover:opacity-100 transition-opacity p-2 text-gray-400 cursor-pointer"
+                className="opacity-30 hover:opacity-100 transition-opacity p-2 text-gray-400 cursor-pointer"
+                aria-label="Admin Login"
               >
-                <Lock className="w-4 h-4" />
+                <Lock className="w-5 h-5" />
+              </button>
+              <button 
+                onClick={() => setIsCartOpen(true)} 
+                className="p-2 text-emerald-600 relative flex items-center justify-center transition-all focus:outline-none"
+                aria-label="Keranjang Belanja"
+              >
+                <ShoppingCart className="w-6 h-6" />
+                {cart.reduce((acc, item) => acc + item.qty, 0) > 0 && (
+                  <span className="absolute top-0 right-0 bg-red-500 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center -mt-1 -mr-1">
+                    {cart.reduce((acc, item) => acc + item.qty, 0)}
+                  </span>
+                )}
               </button>
               <button 
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-gray-600 hover:text-emerald-600 focus:outline-none"
+                className="p-2 text-gray-800 hover:text-emerald-600 focus:outline-none transition-colors ml-1"
+                aria-label="Toggle Menu"
               >
-                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
               </button>
             </div>
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Dropdown */}
         {isMenuOpen && (
           <motion.div 
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="md:hidden bg-white border-t border-gray-100"
+            className="md:hidden bg-white border-t border-gray-100 shadow-xl max-h-[calc(100vh-5rem)] overflow-y-auto"
           >
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <a href="#beranda" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-gray-600 hover:text-emerald-600 hover:bg-gray-50 rounded-md font-medium">Beranda</a>
-              <a href="#keunggulan" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-gray-600 hover:text-emerald-600 hover:bg-gray-50 rounded-md font-medium">Keunggulan</a>
-              <a href="#produk" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-gray-600 hover:text-emerald-600 hover:bg-gray-50 rounded-md font-medium">Produk</a>
-              <a href="#testimoni" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-gray-600 hover:text-emerald-600 hover:bg-gray-50 rounded-md font-medium">Testimoni</a>
-              <button onClick={() => { setIsCartOpen(true); setIsMenuOpen(false); }} className="w-full text-left px-3 py-2 text-emerald-600 hover:bg-emerald-50 rounded-md font-bold flex items-center gap-2">
-                Keranjang Belanja {cart.reduce((acc, item) => acc + item.qty, 0) > 0 && `(${cart.reduce((acc, item) => acc + item.qty, 0)})`}
-              </button>
+            <div className="px-4 py-4 space-y-2">
+              <a href="#beranda" onClick={() => setIsMenuOpen(false)} className="block px-4 py-3 text-gray-700 hover:text-emerald-700 hover:bg-emerald-50 rounded-xl font-semibold text-base transition-colors">Beranda</a>
+              <a href="#keunggulan" onClick={() => setIsMenuOpen(false)} className="block px-4 py-3 text-gray-700 hover:text-emerald-700 hover:bg-emerald-50 rounded-xl font-semibold text-base transition-colors">Keunggulan</a>
+              <a href="#produk" onClick={() => setIsMenuOpen(false)} className="block px-4 py-3 text-gray-700 hover:text-emerald-700 hover:bg-emerald-50 rounded-xl font-semibold text-base transition-colors">Produk</a>
+              <a href="#testimoni" onClick={() => setIsMenuOpen(false)} className="block px-4 py-3 text-gray-700 hover:text-emerald-700 hover:bg-emerald-50 rounded-xl font-semibold text-base transition-colors">Testimoni</a>
             </div>
           </motion.div>
         )}
@@ -220,8 +231,8 @@ export default function App() {
                 />
                 
                 {/* Floating Badge */}
-                <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 z-20 animate-bounce" style={{animationDuration: '3s'}}>
-                  <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600">
+                <div className="absolute -bottom-4 left-4 sm:-bottom-6 sm:-left-6 bg-white p-3 sm:p-4 rounded-2xl shadow-xl flex items-center gap-2 sm:gap-3 z-20 animate-bounce" style={{animationDuration: '3s'}}>
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600 shrink-0">
                     <Award className="w-6 h-6" />
                   </div>
                   <div>
@@ -244,7 +255,7 @@ export default function App() {
             <div className="w-20 h-1.5 bg-emerald-500 mx-auto mt-6 rounded-full" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: <ShieldCheck className="w-8 h-8 flex-shrink-0" />,
@@ -299,7 +310,7 @@ export default function App() {
             </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {displayProducts.map((prod, idx) => (
               <div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-xl transform transition hover:-translate-y-2 group text-gray-800 flex flex-col">
                 <div className="h-60 overflow-hidden relative">
@@ -380,7 +391,7 @@ export default function App() {
             <div className="w-20 h-1.5 bg-emerald-500 mx-auto mt-6 rounded-full" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 text: "Sejak memakai Pasta Gigi Herbal HNI, masalah gusi sensitif saya berkurang drastis. Alhamdulillah cocok dan aman karena bebas fluoride.",
