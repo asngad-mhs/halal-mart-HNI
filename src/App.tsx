@@ -195,7 +195,7 @@ export default function App() {
                   <a href="#produk" className="bg-emerald-600 text-white px-8 py-3.5 rounded-full font-bold hover:bg-emerald-700 transition-all shadow-lg hover:shadow-emerald-600/30 flex items-center justify-center gap-2 text-lg">
                     Belanja Sekarang <ChevronRight className="w-5 h-5" />
                   </a>
-                  <a href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20ingin%20tanya%20prosedur%20Gabung%20Mitra%20HNI." target="_blank" rel="noreferrer" className="bg-white text-emerald-700 border-2 border-emerald-100 px-8 py-3.5 rounded-full font-bold hover:bg-emerald-50 transition-all flex items-center justify-center gap-2 text-lg">
+                  <a href="https://wa.me/6289670924182?text=Halo%20Admin,%20saya%20ingin%20tanya%20prosedur%20Gabung%20Mitra%20HNI." target="_blank" rel="noreferrer" className="bg-white text-emerald-700 border-2 border-emerald-100 px-8 py-3.5 rounded-full font-bold hover:bg-emerald-50 transition-all flex items-center justify-center gap-2 text-lg">
                     <Users className="w-5 h-5" />
                     Gabung Mitra
                   </a>
@@ -355,7 +355,7 @@ export default function App() {
                     </div>
                   ))}
                 </div>
-                <a href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20tertarik%20untuk%20Daftar%20Menjadi%20Agen%20HNI." target="_blank" rel="noreferrer" className="bg-yellow-400 text-yellow-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition-colors shadow-lg flex items-center gap-2 w-full sm:w-auto justify-center text-lg">
+                <a href="https://wa.me/6289670924182?text=Halo%20Admin,%20saya%20tertarik%20untuk%20Daftar%20Menjadi%20Agen%20HNI." target="_blank" rel="noreferrer" className="bg-yellow-400 text-yellow-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition-colors shadow-lg flex items-center gap-2 w-full sm:w-auto justify-center text-lg">
                   Daftar Jadi Agen Sekarang <ChevronRight className="w-5 h-5" />
                 </a>
               </div>
@@ -431,7 +431,7 @@ export default function App() {
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-6">Siap Memulai Gaya Hidup Sehat & Berkah?</h2>
           <p className="text-emerald-100 text-lg mb-8">Pesan produk sekarang atau bergabung menjadi mitra kami untuk mendapatkan harga yang lebih hemat.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Halal%20Mart,%20saya%20ingin%20bertanya." target="_blank" rel="noreferrer" className="bg-white text-emerald-700 px-8 py-3.5 rounded-full font-bold hover:bg-gray-100 transition-colors shadow-lg text-lg flex items-center justify-center gap-2">
+            <a href="https://wa.me/6289670924182?text=Halo%20Admin%20Halal%20Mart,%20saya%20ingin%20bertanya." target="_blank" rel="noreferrer" className="bg-white text-emerald-700 px-8 py-3.5 rounded-full font-bold hover:bg-gray-100 transition-colors shadow-lg text-lg flex items-center justify-center gap-2">
               <Phone className="w-5 h-5" /> Hubungi via WhatsApp
             </a>
             <a href="#produk" className="bg-emerald-800 text-white border border-emerald-500 px-8 py-3.5 rounded-full font-bold hover:bg-emerald-900 transition-colors shadow-lg text-lg inline-flex items-center justify-center">
@@ -485,11 +485,11 @@ export default function App() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3 text-sm">
                   <div className="mt-1"><Phone className="w-4 h-4 text-emerald-500" /></div>
-                  <span className="text-gray-400">0812-3456-7890 (WhatsApp Cepat)</span>
+                  <span className="text-gray-400">089670924182 (WhatsApp Cepat)</span>
                 </li>
                 <li className="flex items-start gap-3 text-sm">
                   <div className="mt-1"><Leaf className="w-4 h-4 text-emerald-500" /></div>
-                  <span className="text-gray-400">Jl. Herbal Alami No.123, Jakarta Selatan, Indonesia</span>
+                  <span className="text-gray-400">Jl. Herbal Halal No.3 Kesugihan kidul, Indonesia</span>
                 </li>
               </ul>
             </div>

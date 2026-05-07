@@ -44,7 +44,7 @@ export default function CartPanel({
         });
         text += `\n*Total Estimasi: ${formatPrice(total)}*\n\nMohon info ketersediaan produk dan ongkos kirim. Terima kasih.`;
         
-        const waUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(text)}`;
+        const waUrl = `https://wa.me/6289670924182?text=${encodeURIComponent(text)}`;
         window.open(waUrl, '_blank');
     };
 
